@@ -1,0 +1,417 @@
+/* Common styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f3f5;
+  margin: 0;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top: 0;
+  color: #1c4fc2;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.file-label {
+  background-color: #f6a130;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.file-label:hover {
+  background-color: #1f6692;
+}
+
+#image-upload {
+  position: relative;
+}
+
+#file-input,
+#remove-file {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#remove-file {
+  top: 10px;
+  right: 10px;
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#remove-file:hover {
+  background-color: #c0392b;
+}
+
+#image-preview {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+#image-preview:hover {
+  transform: scale(1.1);
+}
+
+button {
+  background-color: #34d7db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1f6692;
+}
+
+/* Floating tile styles */
+.floating-tile {
+  position: fixed;
+  z-index: 999;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.floating-tile:hover {
+  background-color: #1f6692;
+}
+
+/* Floating form styles */
+.floating-form-container,
+.floating-form-overlay {
+  position: fixed;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+}
+
+.floating-form-container {
+  background-color: #fff;
+  padding: 20px;
+  width: 300px;
+  display: block;
+  z-index: 1000;
+  right: 1%;
+  bottom: 20px;
+}
+
+#floating-form-container select,
+#floating-form-container input,
+#floating-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+#floating-form-container select:focus,
+#floating-form-container input:focus,
+#floating-form-container textarea:focus {
+  border-color: #3498db;
+}
+
+.floating-form-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  display: none;
+}
+
+.close-marker {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #555;
+}
+
+/* Style for the all doubts container */
+#all-doubts-container h2 {
+  color: #d7efff; /* Updated to a blue color */
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  background-color: #1545b3; /* Updated to a green background color */
+  padding: 15px;
+  z-index: 1;
+  top: 0;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Updated style for the doubt list container */
+.all-doubts-list-container {
+  margin-top: 70px;
+  overflow-y: auto;
+  height: calc(100vh - 70px);
+}
+
+/* Updated style for the doubt list */
+#all-doubts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Responsive columns */
+  gap: 20px;
+  max-width: 100%; /* Set to 100% for responsiveness */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Updated style for each doubt tile */
+.doubt-tile {
+  border: 1px solid #ddd; /* Updated to a lighter border color */
+  /* background-color: beige; */
+  padding: 15px;
+  background-color: #f8f8f8; /* Updated to a light gray background color */
+  transition: transform 0.3s ease;
+  border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+  border-bottom: 4px solid #e9bf06; /* Optional: Add a bottom border with a blue color */
+}
+
+.doubt-tile:hover {
+  transform: scale(1.03); /* Slightly increased scale on hover */
+}
+
+/* Updated style for the doubt information container */
+.doubt-info {
+  color: #555; /* Dark gray text color */
+  display: flex; /* Updated to flex for modern layout */
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd; /* Add a top border with a lighter border color */
+  padding-top: 10px; /* Add padding to separate from the content above */
+}
+
+/* Updated style for each piece of doubt information (user, class, subject) */
+.info-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-right: 10px; /* Reduced margin for a cleaner look */
+  color: #59747a;
+}
+
+/* Updated style for the doubt image */
+
+.doubt-tile img {
+  /* background-color: #f6a130; */
+  max-width: 100%;
+  height: 150px; /* Increased height for the image */
+  display: block;
+  object-fit: contain; /* Cover the container with the image */
+  background-blend-mode: color;
+  margin: auto;
+  margin-top: 10px; /* Added margin-top for spacing */
+  border: 1px solid #ddd; /* Add a border around the image */
+}
+
+/* Updated style for the description */
+.doubt-tile p {
+  margin: 10px 0;
+  /* color: #546d72; */ /* Updated to a slightly lighter gray text color */
+}
+
+
+@media screen and (max-width: 600px) {
+  #floating-form-container select,
+  #floating-form-container input,
+  #floating-form-container textarea {
+    width: 100%;
+  }
+
+  #image-preview,
+  #remove-file {
+    display: block;
+    margin-top: 10px;
+  }
+}
+/* doubt.css */
+
+/* doubt.css */
+/* doubt.css */
+
+/* Existing styles... */
+
+/* Existing styles... */
+
+.detailed-tile-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.detailed-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  margin: 10% auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.detailed-image {
+  /* FONT-WEIGHT: 300; */
+  max-width: 100%;
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.detailed-info-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+#rectify-textbox {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #2054ca;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1f6692;
+}
+
+/* Additional styles if needed... */
+
+/* Additional styles if needed... */
+<style>
+    /* Add this CSS to your existing doubt.css or create a new CSS file */
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-container {
+        position: relative;
+    }
+
+    nav {
+        background-color: #333;
+        padding: 10px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .all-doubts-container {
+        padding: 20px;
+    }
+
+    .all-doubts-container a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+

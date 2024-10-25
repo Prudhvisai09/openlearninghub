@@ -1,0 +1,120 @@
+/* Global styles */
+:root {
+  --body-font: 'Roboto', Arial, sans-serif;
+  --title-font: 'Roboto', Arial, sans-serif;
+  --meta-font: 'Roboto', Arial, sans-serif;
+  --text-font: 'Roboto', Arial, sans-serif;
+  --text-font-color: #000000;
+  --runs-solid-color: #c1bbbb;
+  --black-color: #404040;
+  --hero-color: #aaaaaa;
+  --main-menu-bg: linear-gradient(45deg, #3498db, #3498db); /* Modern blue gradient */
+  --snippet-color: #f8fcff; /* Modern blue */
+  /* Add other variables as needed */
+}
+
+/* Course List styles */
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 40px 20px; /* Added margin to the top and sides */
+}
+
+/* Body styles */
+body {
+  background-color: #ecf0f1; /* Light gray background */
+  color: var(--black-text);
+  margin: 20px; /* Added margin to the top and sides */
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4em;
+}
+
+/* Header styles */
+#header {
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #007bff; /* Modern blue */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Course List styles */
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.course-item {
+  width: calc((100% - 40px) / 3);
+  float: left;
+  background: #fdfeff; /* Modern blue */
+  padding: 0;
+  margin: 10px 0;
+  overflow: hidden;
+  position: relative;
+  border-radius: 14px;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  transition: all .3s ease;
+  box-shadow: -1px 4px 8px 0 rgb(0 0 0 / 0.10);
+}
+
+.course-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #007bff; /* Slightly darker blue */
+}
+
+.course-item h3 {
+  font-size: 18px;
+  margin: 10px;
+  color: #fff; /* White text */
+}
+
+.course-item p {
+  margin: 10px;
+  color: #fff; /* White text */
+}
+
+.course-item a {
+  text-decoration: none;
+  color: #fff;
+  background-color: 007bff; 
+  display: block;
+  padding: 10px;
+  text-align: center;
+  border-radius: 0 0 14px 14px;
+}
+
+.course-item a:hover {
+  background-color: 007bff; 
+}
+
+/* Add other styles as needed */
